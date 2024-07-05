@@ -25,10 +25,13 @@ def analyze():
             auth=(IMAGGA_API_KEY, IMAGGA_API_SECRET),
             params={'image_url': image_url}
         )
-        data = response.json()
-        tags = data['result']['tags']
-        top_tags = tags[:2]  # Tomamos los dos resultados de mayor confianza
-        results.append({'url': image_url, 'tags': top_tags})
+        if response.status_code == 200:
+            data = response.json()
+            tags = data['result']['tags']  # Asegúrate de revisar la estructura real de la respuesta JSON
+            top_tags = tags[:2]  # Tomamos los dos resultados de mayor confianza
+            results.append({'url': image_url, 'tags': top_tags})
+        else:
+            results.append({'url': image_url, 'tags': [{'tag': {'en': 'Error al analizar imagen'}, 'confidence': 0}]})
 
     return render_template('results.html', results=results)
 

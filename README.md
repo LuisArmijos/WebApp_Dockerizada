@@ -33,17 +33,17 @@ Sigue estos pasos para configurar y ejecutar la WebApp:
      ```bash
      docker build -t webapp-dockerizada .
      ```
-  - Construye la imagen Docker:
-    ```bash
-    docker run -p 5000:5000 webapp-dockerizada
-    ```
+   - Construye la imagen Docker:
+     ```bash
+     docker run -p 5000:5000 webapp-dockerizada
+     ```
 
 2. **Acceder a la Aplicación**
    - Abre tu navegador web y visita:
      ```bash
-     [./publish_sensor.sh](http://localhost:5000
+     http://localhost:5000
      ```
-     
+
 ## Autor
 
 Luis Armijos

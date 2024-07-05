@@ -31,11 +31,11 @@ Sigue estos pasos para configurar y ejecutar la WebApp:
 1. **Construir y Ejecutar el Contenedor Docker**
    - Construye la imagen Docker:
      ```bash
-     docker build -t webapp-dockerizada .
+     docker build -t webapp .
      ```
    - Construye la imagen Docker:
      ```bash
-     docker run -p 5000:5000 webapp-dockerizada
+     docker run -p 5000:5000 webapp
      ```
 
 2. **Acceder a la Aplicación**

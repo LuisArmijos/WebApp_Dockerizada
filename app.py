@@ -27,7 +27,7 @@ def analyze():
         )
         data = response.json()
         tags = data['result']['tags']
-        top_tags = tags[:2]  # Tomamos los dos resultados de mayor confianza
+        top_tags = tags[:2] 
         results.append({'url': image_url, 'tags': top_tags})
 
     return render_template('results.html', results=results)

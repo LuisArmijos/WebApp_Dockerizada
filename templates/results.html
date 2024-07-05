@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Web App</title>
+</head>
+<body>
+    <h1>Resultados del Análisis</h1>
+    {% for result in results %}
+        <div>
+            <h2>URL de la Imagen: {{ result.url }}</h2>
+            <img src="{{ result.url }}" alt="Imagen" width="200">
+            <ul>
+                {% for tag in result.tags %}
+                    <li>{{ tag['tag']['en'] }}: {{ tag['confidence'] }}%</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <br>
+    {% endfor %}
+    <a href="/">Volver</a>
+</body>
+</html>

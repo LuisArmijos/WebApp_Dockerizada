@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Web App</title>
+    <title>WebApp</title>
 </head>
 <body>
     <h1>Analizar Imágenes</h1>
-    <form action="/analyze" method="post">
+    <form action="/analyze" method="get">
         {% for image in images %}
             <div>
                 <img src="{{ image }}" alt="Imagen" width="200">

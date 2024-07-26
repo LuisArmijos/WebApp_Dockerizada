@@ -4,9 +4,9 @@ import requests
 app = Flask(__name__)
 
 IMAGES = [
-    "https://dragonball-api.com/transformaciones/goku_ultra.webp",
-    "https://dragonball-api.com/transformaciones/gogeta__bm__ssb_evolution___1__con_aura__by_ssjrose890_df682g0-fullview.webp",
-    "https://dragonball-api.com/transformaciones/beast_gohan___dragon_ball_super_super_hero_by_rmrlr2020_dfbqvta-pre.webp"
+    "https://dragonball-api.com/transformaciones/goku_ultra.jpg",
+    "https://dragonball-api.com/transformaciones/gogeta__bm__ssb_evolution___1__con_aura__by_ssjrose890_df682g0-fullview.jpg",
+    "https://dragonball-api.com/transformaciones/beast_gohan___dragon_ball_super_super_hero_by_rmrlr2020_dfbqvta-pre.jpg"
 ]
 
 IMAGGA_API_KEY = "acc_73a7a1e8a8b83c4"
@@ -27,8 +27,8 @@ def analyze():
         )
         if response.status_code == 200:
             data = response.json()
-            tags = data['result']['tags']  # Asegúrate de revisar la estructura real de la respuesta JSON
-            top_tags = tags[:2]  # Tomamos los dos resultados de mayor confianza
+            tags = data['result']['tags']  
+            top_tags = tags[:2] 
             results.append({'url': image_url, 'tags': top_tags})
         else:
             results.append({'url': image_url, 'tags': [{'tag': {'en': 'Error al analizar imagen'}, 'confidence': 0}]})

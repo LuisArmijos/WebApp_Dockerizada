@@ -4,9 +4,9 @@ import requests
 app = Flask(__name__)
 
 IMAGES = [
-    "https://dragonball-api.com/transformaciones/goku_ultra.jpg",
-    "https://dragonball-api.com/transformaciones/gogeta__bm__ssb_evolution___1__con_aura__by_ssjrose890_df682g0-fullview.jpg",
-    "https://dragonball-api.com/transformaciones/beast_gohan___dragon_ball_super_super_hero_by_rmrlr2020_dfbqvta-pre.jpg"
+    "https://static.bandainamcoent.eu/high/dragon-ball/dragonball-project-z/00-page-setup/dbzk_game-thumbnail.jpg",
+    "https://i.pinimg.com/564x/ae/58/76/ae5876ced7178ab2086107252e459599.jpg",
+    "https://bnetcmsus-a.akamaihd.net/cms/blog_header/yr/YRN3K8WPLESY1663891400581.jpg"
 ]
 
 IMAGGA_API_KEY = "acc_73a7a1e8a8b83c4"
